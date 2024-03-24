@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Rubik:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Chewy", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.contenedor {
+    background-color: #48cae4;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    position: fixed;
+    background-color: transparent;
+    backdrop-filter: invert(20%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 12%;
+    padding: 20px 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+}
+
+.contenedor__icons {
+    display: flex;
+    gap: 20px;
+}
+
+.contenedor__icons a {
+    color: #fff;
+    font-size: 1.4em;
+}
+
+.logo {
+    width: 80px;
+    padding: 0;
+    cursor: pointer;
+    position: absolute;
+    left: 2%;
+    top: 0;
+}
+
+.navegacion a {
+    position: relative;
+    font-size: .95em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navegacion a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transform: scaleX(0);
+    transition: transform .3s;
+}
+
+.navegacion a:hover:after {
+    transform: scaleX(1);
+}
+
+/*Hasta aquí nav*/
+
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calendar {
+    font-family: Arial, sans-serif;
+    width: 70vw;
+    min-height: 70vh;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 30px;
+    background-color: #48cae4;
+    box-shadow: 1px 9px 20px -5px rgba(0, 0, 0, 0.5);
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#prevMonth,
+#nextMonth {
+    width: 3vw;
+    border: none;
+    border-radius: 50%;
+    font-weight: bolder;
+    color: #064d6e;
+    border: 3px solid #064d6e;
+    transition: .5s;
+}
+
+#prevMonth:hover,
+#nextMonth:hover {
+    background-color: #064d6e;
+    color: white;
+}
+
+.month {
+    text-align: center;
+    font-size: 24px;
+    flex-basis: 100%;
+    color: white;
+    /* Para que ocupe el ancho completo */
+}
+
+.days {
+    display: flex;
+    color: #064d6e;
+
+    background-color: #ade8f4;
+    border-radius: 30px 30px 0 0;
+}
+
+.day {
+    flex: 1;
+    text-align: center;
+    padding: 5px;
+}
+
+.dates {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 0 0 30px 30px;
+    overflow: hidden;
+}
+
+.date {
+    flex-basis: calc(100% / 7);
+    /* Para que ocupe un 1/7 del ancho */
+    text-align: center;
+    padding: 5px;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00b4d8;
+    color: white;
+}
+
+.empty {
+    visibility: hidden;
+}
