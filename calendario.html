@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/calendario.css">
+    <!--css-->
+    <script src="https://kit.fontawesome.com/7885181aba.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../bd/registro.php">
+    <!-- fontawesome -->
+    <title>Calendario</title>
+</head>
+
+<body>
+        <!-- inicio header -->
+        <header>
+            <a href="../views/index.html">
+                <img src="../assets/img/SB-removebg-preview.png" alt="" class="logo">
+            </a>
+            <!--navbar-->
+            <nav class="navegacion">
+                <a href="index.html">INICIO</a>
+                <a href="calendario.html">CALENDARIO</a>
+                <a href="Registro.html">RESGISTRO</a>
+            </nav>
+        </header>
+        <main>
+
+            <div class="calendar">
+                <div class="controls">
+                    <button id="prevMonth">&lt;</button>
+                    <div class="month">Marzo 2024</div>
+                    <button id="nextMonth">&gt;</button>
+                </div>
+                <div class="days">
+                    <div class="day">Lun</div>
+                    <div class="day">Mar</div>
+                    <div class="day">Mié</div>
+                    <div class="day">Jue</div>
+                    <div class="day">Vie</div>
+                    <div class="day">Sáb</div>
+                    <div class="day">Dom</div>
+                </div>
+                <div class="dates" id="datesContainer">
+                </div>
+            </div>
+        </main>
+
+        <script src="../controller/script.js"></script>
+
+
+</body>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</html>
