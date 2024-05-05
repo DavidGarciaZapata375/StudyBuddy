@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Rubik:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Chewy", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    scroll-behavior: smooth;
+}
+
+
+
+.contenedor {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+header {
+    position: fixed;
+    background-color: transparent;
+    backdrop-filter: invert(20%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 12%;
+    padding: 20px 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+}
+
+.contenedor__icons {
+    display: flex;
+    gap: 20px;
+}
+
+.contenedor__icons a {
+    color: #fff;
+    font-size: 1.4em;
+}
+
+.logo {
+    width: 80px;
+    padding: 0;
+    cursor: pointer;
+    position: absolute;
+    left: 2%;
+    top: 0;
+}
+
+.navegacion a {
+    position: relative;
+    font-size: .95em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navegacion a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transform: scaleX(0);
+    transition: transform .3s;
+}
+
+.navegacion a:hover:after {
+    transform: scaleX(1);
+}
+
+
+/* hasta aqui menu*/
+
+body {
+    transition: background-color 0.5s ease;
+}
+
+.contador {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #008DDA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    color: #fff;
+    position: relative;
+}
+
+.contador:hover {
+    background-color: #222831;
+}
+
+
+
+
+
+.contador:before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 50%;
+    background: conic-gradient(#008DDA 0%, #064d6e 90%);
+    animation: spin 1s linear infinite;
+    z-index: -1;
+    box-shadow: 0 0 10px #48cae4, 0 0 20px #48cae4, 0 0 30px #48cae4, 0 0 40px #48cae4;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+
+
+.contador__contenedor{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+#countdown-input{
+    border: none;
+    text-align: center;
+    width: 210px;
+    background-color: #ade8f4;
+    padding: 10px;
+    border-radius: 10px;
+    resize: none;
+}
+
+.contenedor__titulo{
+    display: flex;
+
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    color: #064d6e;
+}
+
+.contenedor__titulo h1{
+    font-size: 3em;
+}
