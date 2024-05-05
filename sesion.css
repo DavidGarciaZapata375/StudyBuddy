@@ -152,16 +152,3 @@ main {
     color: #ade8f4;
 }
 
-.remember-forgot input {
-    margin-right: 5px;
-}
-
-.remember-forgot a {
-    text-decoration: none;
-    color: #064d6e;
-}
-
-.login-register a {
-    text-decoration: none;
-    color: #064d6e;
-}
