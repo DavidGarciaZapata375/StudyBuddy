@@ -14,42 +14,54 @@
 </head>
 
 <body>
-        <!-- inicio header -->
-        <header>
-            <a href="../views/index.html">
-                <img src="../assets/img/SB-removebg-preview.png" alt="" class="logo">
-            </a>
-            <!--navbar-->
-            <nav class="navegacion">
-                <a href="index.html">INICIO</a>
-                <a href="calendario.html">CALENDARIO</a>
-                <a href="Registro.html">RESGISTRO</a>
-            </nav>
-        </header>
-        <main>
+    <!-- inicio header -->
+    <header>
+        <a href="../views/index.html">
+            <img src="../assets/img/SB-removebg-preview.png" alt="" class="logo">
+        </a>
+        <!--navbar-->
+        <nav class="navegacion">
+            <a href="index.html">INICIO</a>
+            <a href="calendario.html">CALENDARIO</a>
+            <a href="Estudio.html">MODO ESTUDIO</a>
+            <a href="Registro.html">RESGISTRO</a>
+            <a href="sesion.html">INGRESO</a>
+        </nav>
+    </header>
+    <main>
 
-            <div class="calendar">
-                <div class="controls">
-                    <button id="prevMonth">&lt;</button>
-                    <div class="month">Marzo 2024</div>
-                    <button id="nextMonth">&gt;</button>
-                </div>
-                <div class="days">
-                    <div class="day">Lun</div>
-                    <div class="day">Mar</div>
-                    <div class="day">Mié</div>
-                    <div class="day">Jue</div>
-                    <div class="day">Vie</div>
-                    <div class="day">Sáb</div>
-                    <div class="day">Dom</div>
-                </div>
-                <div class="dates" id="datesContainer">
-                </div>
+        <div class="calendar">
+            <div class="controls">
+                <button id="prevMonth">&lt;</button>
+                <div class="month">Marzo 2024</div>
+                <button id="nextMonth">&gt;</button>
             </div>
-        </main>
+            <div class="days">
+                <div class="day">Lun</div>
+                <div class="day">Mar</div>
+                <div class="day">Mié</div>
+                <div class="day">Jue</div>
+                <div class="day">Vie</div>
+                <div class="day">Sáb</div>
+                <div class="day">Dom</div>
+            </div>
+            <div class="dates" id="datesContainer">
+            </div>
+        </div>
 
-        <script src="../controller/script.js"></script>
+    </main>
 
+    <script src="../javascript/script.js"></script>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-content_cancel">
+                <p id="eventDetails"></p>
+                <span class="close" id="closeModalBtn">&times;</span>
+            </div>
+            <button id="deleteEventBtn">Eliminar Evento</button>
+        </div>
+    </div>
 
 </body>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
