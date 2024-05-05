@@ -79,12 +79,15 @@ header {
 /* hasta aqui menu*/
 
 main {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
+    gap: 10%;
     justify-content: center;
     align-items: center;
     padding-top: 5%;
 }
+
+
 
 .login {
     display: flex;
@@ -93,7 +96,7 @@ main {
     justify-content: space-between;
     padding: 40px;
     width: 30%;
-    min-height: 60%;
+    height: 80vh;
     background-color: #48cae4;
     color: white;
     box-shadow: 1px 9px 20px -5px rgba(0, 0, 0, 0.5);
