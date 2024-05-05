@@ -112,10 +112,12 @@ main {
 
 #prevMonth,
 #nextMonth {
-    width: 3vw;
+    width: 40px;
+    height: 35px;
     border: none;
     border-radius: 50%;
     font-weight: bolder;
+    cursor: pointer;
     color: #064d6e;
     border: 3px solid #064d6e;
     transition: .5s;
@@ -169,6 +171,88 @@ main {
     color: white;
 }
 
+.date:hover{
+    cursor: pointer;
+    background-color: #48cae4;
+}
+
 .empty {
     visibility: hidden;
 }
+
+.today {
+    background-color: #005b96; /* Cambia el color de fondo del día actual según tu preferencia */
+}
+.hasEvent {
+    color: red; /* Cambia el color del número del día cuando hay una tarea asociada */
+}
+
+
+
+/* Estilos para el modal */
+.modal {
+    display: none; /* Por defecto, el modal está oculto */
+    position: fixed;
+    z-index: 1; /* Poner el modal por encima del resto del contenido */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); /* Fondo semitransparente */
+}
+
+.modal-content {
+    background-color: white;
+    margin: 20% auto; /* Centrar verticalmente */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px; /* Ancho máximo del modal */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 10px; /* Añadir relleno */
+    cursor: pointer; /* Cambiar el cursor a un puntero */
+}
+
+.modal-content_cancel{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none; /* Eliminar el subrayado al pasar el ratón */
+    transition: color 0.3s ease; /* Añadir una transición suave al cambiar el color */
+}
+
+#deleteEventBtn{
+    transition: background-color .5s;
+    color: #064d6e;
+    text-decoration: none;
+    background-color: #ade8f4;
+    transition: background-color .5s;
+    border-radius: 25px;
+    padding: 15px;
+    border: none;
+    font-weight: 500;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#deleteEventBtn:hover{
+    background-color: #064d6e;
+    color: #ade8f4;
+}
+
+
